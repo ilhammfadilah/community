@@ -1,0 +1,508 @@
+@import url('./css/satoshi.css');
+
+:root {
+    --primary-green: #1F8A70;
+    --secondary-green: #BFDB38;
+    --black: #00425A;
+    --gray: #656464;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* reset button, input, anchor */
+button,
+input {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.community {
+    color: #1F8A70;
+}
+
+body {
+    font-family: 'Satoshi-Regular';
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+header .logo img {
+    width: 60px;
+}
+
+nav {
+    display: none;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo span {
+    font-family: 'Satoshi-Bold';
+    color: #00425A;
+}
+
+header .form {
+    display: none;
+}
+
+header .form button {
+    background-color: #1F8A70;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    color: #fff;
+    border-radius: .5rem;
+}
+
+/* mobile */
+.nav-mobile {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+    padding: 24px;
+    display: block;
+    transform: translateX(-100%);
+    transition: transform 200ms ease-in-out;
+}
+
+.mobile-navigation__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.logo-mobile {
+    width: 50px;
+}
+
+.navigation-item__mobile {
+    text-decoration: none;
+    display: block;
+    color: #bdbdbd;
+    margin-bottom: 24px;
+}
+
+.nav-mobile > button {
+    display: inline-block;
+    width: 100%;
+    background-color: #1F8A70;
+    padding: 1rem;
+    color: #fff;
+    border-radius: .5rem;
+}
+
+.mobile-navigation__open {
+    transform: translateX(0);
+}
+/* end mobile */
+
+/* section hero */
+section#hero {
+    padding: 1rem;
+}
+
+section#hero *:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+section#hero .hero-introduction a {
+    padding: .5rem 1rem;
+    display: inline-block;
+    border-radius: .5rem;
+    background-color: var(--primary-green);
+    color: #fff;
+}
+
+section#hero .hero-introduction a:hover {
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+}
+
+section#hero .hero-introduction .hero-introduction_button {
+    padding: .5rem 1rem;
+    display: inline-block;
+    border-radius: 1rem;
+    background-color: rgba(31, 138, 112, 0.1);
+    color: var(--primary-green);
+    font-size: 14px;
+}
+
+section#hero .hero-introduction .hero-introduction_title {
+    font-size: 36px;
+    color: var(--black);
+}
+
+section#hero .hero-introduction .hero-introduction_description {
+    color: var(--gray);
+}
+
+section#hero .hero-introduction .hero-introduction_invite {
+    background-color: #fff;
+    color: var(--primary-green);
+    border: 1px solid #1F8A70;
+}
+
+/* section count */
+section#count {
+    background-color: #1F8A70;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#count * {
+    margin-bottom: .5rem;
+    text-align: center;
+    color: #fff;
+}
+
+section#count div h1 {
+    font-size: 36px;
+}
+
+section#count div span {
+    color: #eee;
+}
+
+/* section wedo */
+section#wedo {
+    padding: 1rem;
+}
+
+section#wedo h1 {
+    margin-bottom: 2rem;
+}
+
+section#wedo .card {
+    border: 1px solid rgba(31, 138, 112, 0.5);
+    padding: 1rem;
+    border-radius: .5rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+section#wedo .card:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+section#wedo .card:hover {
+    box-shadow: 10px 10px 5px 0px rgba(224,224,224,1);
+}
+
+section#wedo .card h3 {
+    margin-bottom: 1rem;
+    color: #00425A;
+}
+
+section#wedo .card p {
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+section#wedo .card img {
+    max-width: 50%;
+}
+
+/* projects */
+section#projects {
+    padding: 1rem;
+}
+
+section#projects h1 {
+    /* text-align: center; */
+    margin-bottom: 2rem;
+}
+
+section#projects .card {
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 1px solid rgba(31, 138, 112, 0.5);
+    /* max-width: 410px; */
+}
+
+section#projects .card:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+section#projects .card h2 {
+    color: #00425A;
+}
+
+section#projects .card p {
+    color: #656464;
+}
+
+section#projects .card:hover {
+    transform: scale(1.01);
+    transition: 0.2s ease-in-out;
+}
+/* section blog */
+section#blog {
+    padding: 1rem;
+}
+
+section#blog *:not(:last-child) {
+    margin-bottom: .5rem;
+}
+
+section#blog .blog-top {
+    margin-bottom: 2rem;
+}
+
+section#blog .blog-top h1 {
+    color: var(--black);
+}
+
+section#blog .blog-top a {
+    color: #1F8A70;
+    display: flex;
+}
+
+section#blog .blog-top a svg {
+    margin-left: .5rem;
+    color: #1F8A70;
+}
+
+section#blog .card {
+    border: 1px solid rgba(31, 138, 112, 0.5);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+section#blog .card .card-body .card-labels {
+    margin: 0 1rem;
+}
+
+section#blog .card .card-body .card-labels span {
+    background-color: rgba(31, 138, 112, 0.1);
+    color: #333;
+    padding: 0.4rem;
+    display: inline-block;
+    border-radius: .5rem;
+    font-size: 14px;
+}
+
+section#blog .card .card-body h1 {
+    margin: 1rem 1rem;
+}
+
+section#blog .card .card-body p {
+    margin: 1rem 1rem;
+    color: var(--black);
+}
+
+section#blog .card .card-footer {
+    margin: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray);
+}
+
+/* footer */
+footer {
+    /* background-color: #00425A; */
+    background-color: #1F8A70;
+}
+
+footer .footer-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-connect {
+    padding: 1rem;
+}
+
+.footer-connect .footer-socials *:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.footer-connect .footer-socials a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.footer-connect .footer-socials p {
+    color: #fff;
+}
+
+.footer-links {
+    padding: 1rem;
+    color: #fff;
+}
+
+.footer-links h4 {
+    margin-bottom: 1rem;
+}
+
+.footer-credit {
+    padding: 1rem;
+    color: #fff;
+}
+
+.footer-credit span {
+    font-size: 14px;
+}
+
+/* responsive */
+
+@media screen and (min-width: 680px) {
+
+    /* header */
+    header {
+        margin: 0 4rem;
+    }
+
+    header .logo {
+        flex: 1 1 0;
+    }
+
+    header .form {
+        display: block;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-right: 1rem;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+    /* section */
+    section:not(:first-child) {
+        margin: 6rem 4rem;
+    }
+
+    .section-title {
+        font-size: 32px;
+        color: var(--black);
+    }
+
+    /* wedo */
+    section#wedo .card:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    /* hero */
+    section#hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin: 0 4rem 0 4rem;
+    }
+
+    /* count */
+    section#count {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0 0 2rem 0;
+    }
+
+    /* section we do */
+    section#wedo .card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* intro */
+    section#intro {
+        margin: 0 0;
+    }
+    section#intro .card-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    section#intro .card-wrapper .card {
+        flex-direction: column;
+        border: none;
+        margin-top: 2rem;
+    }
+
+    /* projects */
+    section#projects .card-wrapper {
+        display: flex;
+        justify-content: space-around;
+        gap: 2rem;
+    }
+
+    section#projects .card:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    /* blog */
+    section#blog .blog-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    section#blog *:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    /* footer */
+    footer {
+        padding: 2rem 4rem;
+    }
+}
